@@ -58,12 +58,12 @@ if(isset($_POST['submit'])){
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'sf.dev.task15@gmail.com';              //SMTP username
-                $mail->Password   = 'zthuknemfvhtporc';                     //SMTP password
+                $mail->Username   = 'example@example';              	    //SMTP username
+                $mail->Password   = 'your username password';               //SMTP password
                 $mail->SMTPSecure = 'ssl';                                  //Enable implicit TLS encryption
                 $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-                $mail->setFrom('sf.dev.task15@gmail.com', 'Admin');
+                $mail->setFrom('example@example', 'Admin');
                 $mail->addAddress($email, $name);
                 $mail->Subject = "Please verify email!";
                 $mail->isHTML(true);
